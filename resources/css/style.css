@@ -1,0 +1,136 @@
+/* 
+Example page: 
+https://content.codecademy.com/PRO/independent-practice-projects/responsive-club-site/example-site/index.html 
+*/
+
+html {
+  box-sizing: border-box;
+}
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body {
+  display: grid;
+  background-color: black;
+  color: whitesmoke;
+  font-family: "Raleway", sans-serif;
+}
+
+/* Mobile Nav */
+nav {
+  display: flex;
+  color: chocolate;
+  text-decoration: underline;
+  flex-flow: column wrap;
+  align-items: center;
+  font-size: 1.5em;
+  line-height: 1.5em;
+}
+nav span {
+  padding: 0.3em;
+}
+/* Desktop Nav */
+@media screen and (min-width: 800px) {
+  nav {
+    display: flex;
+    color: chocolate;
+    text-decoration: underline;
+    justify-content: flex-start;
+    flex-direction: row;
+    font-size: 2em;
+    line-height: 2em;
+  }
+  nav span {
+    padding: 0.25em;
+  }
+}
+.container {
+}
+.content {
+}
+
+/* Mobile Album */
+.album {
+  display: flex;
+  flex-direction: column;
+}
+.album figure {
+  border: 1em whitesmoke solid;
+  display: flex;
+  flex-flow: column;
+  margin: 1em;
+  max-height: 500px;
+  overflow: hidden;
+}
+img {
+  display: flex;
+  width: 100%;
+  height: auto;
+}
+.album figcaption {
+  background-color: #222;
+  padding: 0.5em;
+  text-align: center;
+  font-style: italic;
+}
+/* Desktop Album */
+@media screen and (min-width: 800px) {
+  .album {
+    display: flex;
+    flex-direction: row;
+  }
+  .album figure {
+    border: 0.5em whitesmoke solid;
+    display: flex;
+
+    margin: 2em;
+    padding: 0.3em;
+
+    overflow: hidden;
+  }
+}
+
+#welcome {
+}
+#testimonial {
+}
+#invitation {
+}
+
+.portrait figure {
+  display: flex;
+  flex-flow: column;
+  margin: 1em;
+  max-height: 300px;
+  overflow: hidden;
+}
+.portrait image {
+  display: flex;
+  height: 100%;
+  width: auto;
+}
+
+@media screen and (min-width: 800px) {
+  .portrait {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+  .portrait figure {
+    display: flex;
+    flex-flow: column;
+    margin: 1em;
+    max-width: 500px;
+    overflow: hidden;
+    align-items: center;
+  }
+  .portrait image {
+    display: flex;
+    height: 100%;
+    width: auto;
+  }
+}
